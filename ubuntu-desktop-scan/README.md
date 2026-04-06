@@ -36,6 +36,8 @@ This assessment evaluates the security posture of a local Ubuntu host. The objec
 - **High:** 0  
 - **Medium:** 1  
 
+![After Patch](../assets/after-patch.png)
+
 ---
 
 ## Key Findings
