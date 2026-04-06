@@ -60,25 +60,25 @@ The assessment identified multiple medium to critical vulnerabilities. Review of
 ---
 
 ### Root Cause
-Standard update mechanisms did not apply all available security patches. Certain updates fall under extended security maintenance and are not enabled by default.
+Some vulnerabilities remained unpatched because their fixes are distributed through Ubuntu’s Extended Security Maintenance (ESM) repositories, which require Ubuntu Pro to access and were not enabled on the system.
 
 ---
 
 ### Remediation
 Remediation actions included:
 
-- Enabling extended security updates  
-- Applying all available patches  
-- Rebooting the system to ensure updates were effective  
+- Enabling ESM updates via Ubuntu Pro
+- Applying all available security patches
+- Rebooting the system to ensure updates were applied 
 
 ---
 
 ### Outcome
 Following remediation:
 
-- All critical vulnerabilities were resolved  
-- All high-severity vulnerabilities were resolved  
-- Remaining findings were limited to low/medium or informational items  
+- All critical and high-severity vulnerabilities were resolved
+- 1 medium-severity vulnerability remains and is considered low risk due to limited exposure (local service)
+- Remaining findings are limited to informational items
 
 ---
 
