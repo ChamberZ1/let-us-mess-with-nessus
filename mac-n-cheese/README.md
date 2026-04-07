@@ -1,11 +1,13 @@
 # Macbook Vulnerability Assessment
 
 ## Overview
+
 This assessment evaluates the security posture of a Macbook host on the network. The objective was to identify vulnerabilities, determine root causes, apply remediation, and validate the effectiveness of those fixes.
+
 ---
 
 ## Environment
-- Target Operating System: MacOS Sequoia 15.7.5 
+- **Target Operating System:** MacOS Sequoia 15.7.5 
 
 ---
 
@@ -20,57 +22,58 @@ This assessment evaluates the security posture of a Macbook host on the network.
 
 ## Results
 
-### Before Remediation
-- High: 4
-- Low: 2 
+### Initial Scan
+- **High:** 4
+- **Low:** 2 
 
 ![Macbook Initial Scan Results](../assets/apple-initial-alt.png)
 
 ---
 
-### After Remediation
-- Critical:  
-- High:  
-- Medium:  
+### Second Scan 
+- **Critical:** 2
+- **High:** 6
+- **Medium:** 5
+- **Low:** 2
 
-![ ]()
+![Macbook Second Scan Results ](../assets/apple-new-vulns.png)
 
 ---
 
+### Final Scan
+- **Critical:** 0
+- **High:** 0
+- **Medium:** 0
+- **Low:** 2
+
+![Macbook Final Scan Results](../assets/apple-patched.png)
+
 ## Key Findings
-- **Outdated Go Software**
-The high-severity vulnerabilities were due to an outdated version of Go. These were remediated through software updates.
+- **Outdated Software**
+The majority of high-severity vulnerabilities were caused by outdated third-party software (e.g., Docker Desktop, Go, Wireshark, VirtualBox, libxml2).
 - **OpenSSH**
-The OpenSSH issue is low-severity. Furthermore, the vulnerability can be remediated by turning off remote login on the macbook. Remote login (SSH) was temporarily enabled to allow Nessus to perform an authenticated scan. 
+A low-severity finding related to SSH was identified due to Remote Login being enabled for authenticated scanning. This can be mitigated by disabling SSH when not needed. 
 
 ---
 
 ## Analysis
 
-### Initial Findings
-The assessment identified multiple low-severity and high-severity vulnerabilities. Review of individual findings revealed that the issues were associated with outdated software 
-![Initial Vulnerabilites ](../assets/apple-initial-vulns.png)
 
----
-
-### Root Cause
-The most severe vulnerabilities were caused by outdated software. The low-severity vulnerabilities were due to a temporary enabling of SSH for Nessus to perform authenticated vulnerability scanning.
 ---
 
 ### Remediation
-- Updating Go software to the latest version
-- As for the SSH issue, I will disable remote login on the macbook after this assessment
+- Updated all identified vulnerable software to patched versions
+- Remote Login will be disabled post-assessment to reduce attack surface
 
 ---
 
 ### Outcome
-- All high-severity vulnerabilities were resolved
-- 
--  
+- All medium, high, and critical-severity vulnerabilities were resolved
+- Remote Login was disabled post-assessment, effectively remediating the low-severity OpenSSH issues
 
 ---
 
 ## Key Takeaways
--  
--  
--  
+- KEEP EVERYTHING UP-TO-DATE
+- Keeping software updated reduces vulnerability exposure
+- Disable SSH when not needed to reduce attack surface
