@@ -50,9 +50,9 @@ This assessment evaluates the security posture of a Macbook host on the network.
 
 ## Key Findings
 - **Outdated Software**
-The majority of high-severity vulnerabilities were caused by outdated third-party software (e.g., Docker Desktop, Go, Wireshark, VirtualBox, libxml2).
+The majority of high-severity vulnerabilities were caused by outdated software and dependencies (e.g., Docker Desktop, Go, Wireshark, VirtualBox, libxml2).
 - **OpenSSH**
-A low-severity issue was identified due to an outdated, vulnerable version of OpenSSH. As OpenSSH is managed by MacOS, no direct update was performed. The service was temporarily enabled for authenticated scanning and can be disabled when not needed. 
+A low-severity issue was identified due to an outdated, vulnerable version of OpenSSH. As OpenSSH is managed by MacOS, no direct update was performed. The service was temporarily enabled for authenticated scanning and should be disabled when not needed. 
 
 ---
 
